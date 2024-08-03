@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="game">
+            <canvas id="tetris" width="300" height="600"></canvas>
+            <button id="startGame"><span>INICIAR JUEGO</span></button>
+            <button id="pauseGame"><span>PAUSAR JUEGO</span></button>
+            <div id="gameOver" style="display: none;">
+                <p>¡JUEGO TERMINADO!</p>
+                <button id="restartGame"><span>REINICIAR JUEGO</span></button>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <p>CREADO POR JULIAN SEVERICHE</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

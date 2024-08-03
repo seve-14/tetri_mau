@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #ff6b6b, #ff9f43, #fffc5c, #5efce1, #3d7dca);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #fff;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    width: 90vw; /* Ancho responsivo */
+    max-width: 400px; /* Máximo ancho */
+    box-sizing: border-box;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+canvas {
+    border: 2px solid #fff;
+    width: 100%; /* Ancho responsivo del canvas */
+    height: auto; /* Mantener proporción */
+    max-width: 300px; /* Máximo ancho del canvas */
+    aspect-ratio: 1 / 2; /* Relación de aspecto */
+}
+
+button {
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    transition: all 1.5s ease;
+    font-family: 'Ropa Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    padding: 0;
+    width: 100%; /* Botones ocupan todo el ancho disponible */
+    max-width: 300px; /* Máximo ancho de botones */
+    margin: 5px 0;
+}
+
+button span {
+    display: inline-block;
+    padding: 15px;
+    font-size: 17px;
+    border-radius: 20px;
+    background: #ffffff10;
+    backdrop-filter: blur(20px);
+    transition: 0.4s ease-in-out;
+    transition-property: color;
+    height: 100%;
+    width: 100%;
+}
+
+button span:hover {
+    backdrop-filter: blur(0px);
+    color: #ffffff;
+}
+
+#pauseGame {
+    margin-top: 10px;
+}
+
+#gameOver {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#gameOver p {
+    font-size: 24px;
+    color: #fff;
+}
+
+#restartGame {
+    margin-top: 10px;
+    padding: 10px;
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    transition: all 1.5s ease;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Ropa Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+}
+
+#restartGame:hover {
+    backdrop-filter: blur(0px);
+    color: #ffffff;
+}
+
+#footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#footer p {
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+    button span {
+        font-size: 14px; /* Tamaño de fuente más pequeño en móviles */
+        padding: 10px;
+    }
+
+    #gameOver p {
+        font-size: 20px;
+    }
+}
